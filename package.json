@@ -1,0 +1,20 @@
+{
+  "name": "reservasi-notifier",
+  "version": "1.0.0",
+  "description": "script to get new booking data from lp reservasi and notify to line group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dewangga Winardi <dewangga.winardi@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "~3.5.0",
+    "dotenv": "~4.0.0",
+    "lodash": "~4.17.4",
+    "mysql": "~2.13.0",
+    "promise-mysql": "~3.0.0",
+    "request": "~2.81.0",
+    "utils": "~0.3.1"
+  }
+}
