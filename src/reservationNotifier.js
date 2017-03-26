@@ -1,11 +1,11 @@
 'use strict';
 
-const helper = require('./helpers');
+const helper = require('./helper');
 const dotenv = require('dotenv');
 const _ = require('lodash');
 
 let closure = {};
-dotenv.config();
+dotenv.config({path: '../.env'});
 
 helper.getBookingData()
 	.then((reservationList) => {		
