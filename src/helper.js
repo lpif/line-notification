@@ -2,7 +2,7 @@
 
 const Bluebird = require('bluebird');
 const mysql = require('promise-mysql');
-const request = Bluebird.promisify(require('request'));
+const request = Bluebird.promisify(require('request').defaults({'proxy':'http://10.151.34.16:3416'}));
 const _ = require('lodash');
 
 /***
@@ -153,7 +153,6 @@ exports.sendLineNotification = (message) => {
 	};
 	return request(options)
 		.then((res) => {
-			console.log(res);
 			return Bluebird.resolve(res.body);
 		});
 };

@@ -6,9 +6,8 @@ const _ = require('lodash');
 
 let closure = {};
 dotenv.config({path: '../.env'});
-
 helper.getBookingData()
-	.then((reservationList) => {		
+	.then((reservationList) => {
 		closure.reservationList = reservationList;
 		return helper.getNotificationData(reservationList);
 	})
