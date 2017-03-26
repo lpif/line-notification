@@ -2,7 +2,7 @@
 
 const Bluebird = require('bluebird');
 const mysql = require('promise-mysql');
-const request = Bluebird.promisify(require('request').defaults({'proxy':'http://10.151.34.16:3416'}));
+const request = Bluebird.promisify(require('request').defaults({'proxy': process.env.PROXY_URL}));
 const _ = require('lodash');
 
 /***
